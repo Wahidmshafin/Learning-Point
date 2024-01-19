@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="upload.css">
+    <script src="https://cdn.ckeditor.com/ckeditor5/11.0.1/classic/ckeditor.js"></script>
+    <title>Upload</title>
+</head>
+<body>
+    <div>
+        <img src="backgroundforuploadinfo.jpg" alt="" id="uploadinfobg">
+        <div class="uploadinfo"><form class="form-horizontal" action="http://localhost/LearningPoint/upload.php" method="post">
+        <fieldset>
+        
+        <legend><b>Upload Information</b></legend><br><br>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="coursename">Course Name:</label>  
+            <div class="col-md-4">
+            <select name="coursename" id="coursename" class="form-control input-md">
+              <option value="Web">Web</option>
+              <option value="Data Structure">Data Structure</option>
+              <option value="Algorithm Analysis">Algorithm Analysis</option>
+              <option value="Object Oriented Programming">Object Oriented Programming</option>
+              <option value="Android Development">Android Development</option>
+              <option value="Python">Python</option>
+            </select>
+            </div>
+          </div>
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="topicname">Topic Name:</label>  
+          <div class="col-md-4">
+          <input id="topicname" name="topicname" type="text" placeholder="" class="form-control input-md" required="">
+            
+          </div>
+        </div>
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="difficulty">Difficulty Level:</label>  
+            <div class="col-md-2">
+            <select name="difficulty" id="difficulty" class="form-control input-md">
+              <option value="Easy">Easy</option>
+              <option value="Medium">Medium</option>
+              <option value="Hard">Hard</option>
+            </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="apxtime">Approximate Time:</label>  
+              <div class="col-md-2">
+                <input id="apxtime" name="apxtime" type="text" placeholder="" class="form-control input-md" required="">
+              </div>
+          </div>
+
+        
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="prereq">Prerequisite:</label>  
+          <div class="col-md-4">
+          <input id="prereq" name="prereq" type="text" placeholder="" class="form-control input-md" required="">
+            
+          </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="description">Description</label>
+            <div class="col-md-8">                     
+              <textarea name="description" id="editor">
+                    &lt;p&gt;This is some sample content.&lt;/p&gt;
+              </textarea>
+              <script>
+                ClassicEditor
+                  .create( document.querySelector( '#editor' ) )
+                  .catch( error => {
+                  console.error( error );
+                  } );
+              </script>
+            </div><br>
+          </div>
+          
+    
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="submitfordes"></label>
+            <div class="col-md-4">
+              <button id="submitfordes" name="submitfordes" class="btn btn-success">Submit</button>
+            </div>
+          </div>
+        
+        </fieldset>
+        </form>
+    </div>
+</div>
+    
+    
+        
+</body>
+</html>
